@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+
+  "name": "ESPro+",
+
+  "version": "2.1.0",
+
+  "description": "Attendance Enhancer for Christ University ESPro",
+
+  "host_permissions": [
+    "https://espro.christuniversity.in:444/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://espro.christuniversity.in:444/*"
+      ],
+
+      "css": [
+        "styles.css"
+      ],
+
+      "js": [
+
+        "parser.js",
+
+        "calculator.js",
+
+        "popover.js",
+
+        "ui.js",
+
+        "renderer.js",
+
+        "content.js"
+
+      ],
+
+      "run_at": "document_idle"
+
+    }
+  ]
+}

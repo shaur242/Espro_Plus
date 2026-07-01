@@ -1,0 +1,312 @@
+/* ==========================================
+   ESPro+
+   styles.css
+========================================== */
+
+/* ==========================
+   Attendance Panel
+========================== */
+
+.attendance-plus{
+
+    margin-top:10px;
+
+    padding:12px;
+
+    border:1px solid #dfe6ee;
+
+    border-radius:16px;
+
+    background:#ffffff;
+
+    transition:.25s ease;
+
+}
+
+.attendance-plus:hover{
+
+    border-color:#c9d4e2;
+
+}
+
+/* ==========================
+   Title
+========================== */
+
+.espro-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#344767;
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================
+   Rows
+========================== */
+
+.espro-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:7px 0;
+
+}
+
+.espro-label{
+
+    font-size:13px;
+
+    color:#555;
+
+}
+
+/* ==========================
+   Badges
+========================== */
+
+.espro-badge{
+
+    min-width:78px;
+
+    text-align:center;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+.espro-badge.green{
+
+    background:#2e7d32;
+
+}
+
+.espro-badge.orange{
+
+    background:#ef6c00;
+
+}
+
+.espro-badge.red{
+
+    background:#d32f2f;
+
+}
+
+/* ==========================
+   Simulator
+========================== */
+
+.espro-simulator{
+
+    margin-top:10px;
+
+    border-top:1px solid #edf1f5;
+
+    padding-top:8px;
+
+}
+
+.espro-toggle{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#344767;
+
+    padding:2px 0;
+
+}
+
+.espro-toggle:hover{
+
+    color:#1976d2;
+
+}
+
+.espro-arrow{
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+/* ==========================
+   Body
+========================== */
+
+.espro-simulator-body{
+
+    margin-top:8px;
+
+}
+
+/* ==========================
+   Slider Labels
+========================== */
+
+.espro-slider-labels{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:11px;
+
+    color:#888;
+
+    margin-bottom:2px;
+
+}
+
+/* ==========================
+   Slider
+========================== */
+
+.espro-slider{
+
+    width:100%;
+
+    margin:4px 0;
+
+    accent-color:#1976d2;
+
+}
+
+/* ==========================
+   Slider Value
+========================== */
+
+.espro-slider-value{
+
+    text-align:center;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#1976d2;
+
+    margin:4px 0 6px;
+
+}
+
+/* ==========================
+   Projection Container
+========================== */
+
+.espro-projected{
+
+    margin-top:6px;
+
+}
+
+/* ==========================
+   Projection Card
+========================== */
+
+.espro-projection{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+    border:1px solid #edf1f5;
+
+    border-radius:10px;
+
+    padding:10px 14px;
+
+}
+
+.espro-projection-item{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:4px;
+
+}
+
+.projection-title{
+
+    font-size:11px;
+
+    color:#777;
+
+}
+
+.projection-value{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#344767;
+
+}
+
+.projection-divider{
+
+    width:1px;
+
+    height:22px;
+
+    background:#dfe5eb;
+
+}
+
+/* ==========================
+   Smooth Animation
+========================== */
+
+.espro-toggle,
+.espro-badge,
+.attendance-plus{
+
+    transition:.25s ease;
+
+}
+
+.espro-simulator-body{
+
+    overflow:hidden;
+
+}
