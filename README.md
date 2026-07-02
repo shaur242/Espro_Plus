@@ -19,6 +19,7 @@ A Chrome extension that enhances the Christ University ESPro attendance dashboar
 4. Enable **Developer mode**.
 5. Click **Load unpacked**.
 6. Select the `ESPro-Plus` folder.
+7. Visit https://espro.christuniversity.in:444/main/attendence 
 
 ## Disclaimer
 
