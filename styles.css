@@ -1,296 +1,253 @@
 /* ==========================================
    ESPro+
-   styles.css
+   styles.css (Adaptive Dark Mode Support)
 ========================================== */
+
+:root {
+    /* Light Theme Variables */
+    --espro-bg: #ffffff;
+    --espro-border: #dfe6ee;
+    --espro-border-hover: #c9d4e2;
+    --espro-text-main: #344767;
+    --espro-text-muted: #555555;
+    --espro-text-sub: #777777;
+    --espro-slider-lbl: #888888;
+    --espro-proj-bg: #f8fafc;
+    --espro-proj-border: #edf1f5;
+    --espro-divider: #dfe5eb;
+    
+    /* Static Badge Colors */
+    --badge-green: #2e7d32;
+    --badge-orange: #ef6c00;
+    --badge-red: #d32f2f;
+}
+
+/* PORTAL DARK MODE OVERRIDE */
+[data-theme="dark"] {
+    --espro-bg: #1e293b;            /* Dark slate background */
+    --espro-border: #334155;        /* Subdued borders */
+    --espro-border-hover: #475569;
+    --espro-text-main: #f1f5f9;      /* Bright text for readability */
+    --espro-text-muted: #cbd5e1;    /* Light gray for labels */
+    --espro-text-sub: #94a3b8;
+    --espro-slider-lbl: #64748b;
+    --espro-proj-bg: #0f172a;       /* Darker card inset */
+    --espro-proj-border: #1e293b;
+    --espro-divider: #334155;
+}
 
 /* ==========================
    Attendance Panel
 ========================== */
 
-.attendance-plus{
-
-    margin-top:10px;
-
-    padding:12px;
-
-    border:1px solid #dfe6ee;
-
-    border-radius:16px;
-
-    background:#ffffff;
-
-    transition:.25s ease;
-
+.attendance-plus {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid var(--espro-border);
+    border-radius: 16px;
+    background: var(--espro-bg);
+    transition: .25s ease;
 }
 
-.attendance-plus:hover{
-
-    border-color:#c9d4e2;
-
+.attendance-plus:hover {
+    border-color: var(--espro-border-hover);
 }
 
 /* ==========================
    Title
 ========================== */
 
-.espro-title{
-
-    font-size:15px;
-
-    font-weight:700;
-
-    color:#344767;
-
-    margin-bottom:8px;
-
+.espro-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--espro-text-main);
+    margin-bottom: 8px;
 }
 
 /* ==========================
    Rows
 ========================== */
 
-.espro-row{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin:7px 0;
-
+.espro-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7px 0;
 }
 
-.espro-label{
-
-    font-size:13px;
-
-    color:#555;
-
+.espro-label {
+    font-size: 13px;
+    color: var(--espro-text-muted);
 }
 
 /* ==========================
    Badges
 ========================== */
 
-.espro-badge{
-
-    min-width:78px;
-
-    text-align:center;
-
-    padding:5px 12px;
-
-    border-radius:999px;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    color:white;
-
+.espro-badge {
+    min-width: 78px;
+    text-align: center;
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
 }
 
-.espro-badge.green{
-
-    background:#2e7d32;
-
+.espro-badge.green {
+    background: var(--badge-green);
 }
 
-.espro-badge.orange{
-
-    background:#ef6c00;
-
+.espro-badge.orange {
+    background: var(--badge-orange);
 }
 
-.espro-badge.red{
-
-    background:#d32f2f;
-
+.espro-badge.red {
+    background: var(--badge-red);
 }
 
 /* ==========================
    Simulator
 ========================== */
 
-.espro-simulator{
-
-    margin-top:10px;
-
-    border-top:1px solid #edf1f5;
-
-    padding-top:8px;
-
+.espro-simulator {
+    margin-top: 10px;
+    border-top: 1px solid var(--espro-proj-border);
+    padding-top: 8px;
 }
 
-.espro-toggle{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    cursor:pointer;
-
-    user-select:none;
-
-    font-size:14px;
-
-    font-weight:600;
-
-    color:#344767;
-
-    padding:2px 0;
-
+.espro-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--espro-text-main);
+    padding: 2px 0;
 }
 
-.espro-toggle:hover{
-
-    color:#1976d2;
-
+.espro-toggle:hover {
+    color: #1976d2;
 }
 
-.espro-arrow{
-
-    font-size:18px;
-
-    transition:.25s;
-
+.espro-arrow {
+    font-size: 18px;
+    transition: .25s;
 }
 
 /* ==========================
    Body
 ========================== */
 
-.espro-simulator-body{
-
-    margin-top:8px;
-
+.espro-simulator-body {
+    margin-top: 8px;
+    overflow: hidden;
 }
 
 /* ==========================
    Slider Labels
 ========================== */
 
-.espro-slider-labels{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    font-size:11px;
-
-    color:#888;
-
-    margin-bottom:2px;
-
+.espro-slider-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--espro-slider-lbl);
+    margin-bottom: 2px;
 }
 
 /* ==========================
    Slider
 ========================== */
 
-.espro-slider{
-
-    width:100%;
-
-    margin:4px 0;
-
-    accent-color:#1976d2;
-
+.espro-slider {
+    width: 100%;
+    margin: 4px 0;
+    accent-color: #1976d2;
 }
 
 /* ==========================
    Slider Value
 ========================== */
 
-.espro-slider-value{
-
-    text-align:center;
-
-    font-size:16px;
-
-    font-weight:700;
-
-    color:#1976d2;
-
-    margin:4px 0 6px;
-
+.espro-slider-value {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1976d2;
+    margin: 4px 0 6px;
 }
 
 /* ==========================
    Projection Container
 ========================== */
 
-.espro-projected{
-
-    margin-top:6px;
-
+.espro-projected {
+    margin-top: 6px;
 }
 
 /* ==========================
    Projection Card
 ========================== */
 
-.espro-projection{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:#f8fafc;
-
-    border:1px solid #edf1f5;
-
-    border-radius:10px;
-
-    padding:10px 14px;
-
+.espro-projection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--espro-proj-bg);
+    border: 1px solid var(--espro-proj-border);
+    border-radius: 10px;
+    padding: 10px 14px;
 }
 
-.espro-projection-item{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:4px;
-
+.espro-projection-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
 }
 
-.projection-title{
-
-    font-size:11px;
-
-    color:#777;
-
+.projection-title {
+    font-size: 11px;
+    color: var(--espro-text-sub);
 }
 
-.projection-value{
-
-    font-size:15px;
-
-    font-weight:700;
-
-    color:#344767;
-
+.projection-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--espro-text-main);
 }
 
-.projection-divider{
+.projection-divider {
+    width: 1px;
+    height: 22px;
+    background: var(--espro-divider);
+}
 
-    width:1px;
+/* ==========================
+   Popover Styles (New Support)
+========================== */
 
-    height:22px;
+.espro-popover {
+    position: absolute;
+    z-index: 9999;
+    padding: 14px;
+    border: 1px solid var(--espro-border);
+    border-radius: 16px;
+    background: var(--espro-bg);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    width: 240px;
+}
 
-    background:#dfe5eb;
-
+.espro-popover-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--espro-text-main);
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 /* ==========================
@@ -299,14 +256,6 @@
 
 .espro-toggle,
 .espro-badge,
-.attendance-plus{
-
-    transition:.25s ease;
-
-}
-
-.espro-simulator-body{
-
-    overflow:hidden;
-
+.attendance-plus {
+    transition: .25s ease, background-color .25s ease, border-color .25s ease;
 }

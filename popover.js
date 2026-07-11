@@ -14,34 +14,23 @@ const Popover = {
     currentRefs: null,
 
     create() {
-
         if (this.element)
             return;
 
         this.element = document.createElement("div");
-
         this.element.className = "espro-popover";
-
         this.element.style.display = "none";
 
         document.body.appendChild(this.element);
 
         // Close when clicking outside
         document.addEventListener("click", (e) => {
-
-            if (!this.element)
-                return;
-
-            if (
-                this.element.contains(e.target)
-            )
-                return;
-
+            if (!this.element) return;
+            if (this.element.contains(e.target)) return;
             this.close();
-
         });
-
     },
+
 
     open(subject, refs, anchor) {
 
